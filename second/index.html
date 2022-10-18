@@ -1,0 +1,28 @@
+<body>
+    <input id="string" value="asad asd">
+    <input id="letter" value="A">
+    <button id="button">Test</button>
+
+    <script>
+        document.getElementById("button").onclick =
+            function () {
+                var str = document.getElementById("string").value.toLowerCase();
+
+               // document.write("The string you entered: ", str)
+                var letter = document.getElementById("letter").value.toLowerCase();
+
+
+
+                if (str.indexOf(letter) == -1) {
+                    alert("Letter does not exist in the string")
+                }
+                else {
+                    var afterLetter = str.substring(str.indexOf(letter) + 1);
+
+                    document.write("<b>Substring<b> : ", afterLetter)
+                }
+            }
+
+    </script>
+
+</body>
